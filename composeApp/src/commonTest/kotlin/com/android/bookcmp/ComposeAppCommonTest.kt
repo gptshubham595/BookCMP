@@ -1,4 +1,4 @@
-package com.android.boomcmp
+package com.android.bookcmp
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

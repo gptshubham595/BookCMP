@@ -1,4 +1,4 @@
-package com.android.boomcmp
+package com.android.bookcmp
 
 class Greeting {
     private val platform = getPlatform()

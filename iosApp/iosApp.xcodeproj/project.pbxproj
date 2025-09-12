@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		D2B1752566A2A40CAAC6D2E3 /* BoomCMP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoomCMP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2B1752566A2A40CAAC6D2E3 /* bookcmp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bookcmp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -59,7 +59,7 @@
 		93F056F8617E60C9859BDE5B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D2B1752566A2A40CAAC6D2E3 /* BoomCMP.app */,
+				D2B1752566A2A40CAAC6D2E3 /* bookcmp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,7 +87,7 @@
 			packageProductDependencies = (
 			);
 			productName = iosApp;
-			productReference = D2B1752566A2A40CAAC6D2E3 /* BoomCMP.app */;
+			productReference = D2B1752566A2A40CAAC6D2E3 /* bookcmp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */

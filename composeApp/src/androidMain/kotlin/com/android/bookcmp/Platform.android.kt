@@ -1,4 +1,4 @@
-package com.android.boomcmp
+package com.android.bookcmp
 
 import android.os.Build
 

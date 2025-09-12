@@ -1,4 +1,4 @@
-package com.android.boomcmp
+package com.android.bookcmp
 
 class JVMPlatform: Platform {
     override val name: String = "Java ${System.getProperty("java.version")}"

@@ -92,11 +92,11 @@ kotlin {
 }
 
 android {
-    namespace = "com.android.boomcmp"
+    namespace = "com.android.bookcmp"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "com.android.boomcmp"
+        applicationId = "com.android.bookcmp"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -128,11 +128,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "com.android.boomcmp.MainKt"
+        mainClass = "com.android.bookcmp.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "com.android.boomcmp"
+            packageName = "com.android.bookcmp"
             packageVersion = "1.0.0"
         }
     }
