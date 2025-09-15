@@ -1,4 +1,4 @@
-rootProject.name = "bookcmp"
+rootProject.name = "BookCmp"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
