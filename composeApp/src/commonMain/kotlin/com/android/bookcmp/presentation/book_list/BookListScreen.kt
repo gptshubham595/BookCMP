@@ -1,9 +1,21 @@
 package com.android.bookcmp.presentation.book_list
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalSoftwareKeyboardController
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.android.bookcmp.presentation.book_list.components.BookSearchBar
+import com.android.bookcmp.presentation.ui.DarkBlue
+import com.android.bookcmp.presentation.ui.Dimens
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
@@ -35,5 +47,27 @@ fun BookListScreen(
     onAction: (BookListAction) -> Unit = {},
     modifier: Modifier
 ) {
+    val keyboardController = LocalSoftwareKeyboardController.current
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(DarkBlue)
+            .statusBarsPadding(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+    ) {
+        BookSearchBar(
+            state.searchQuery,
+            {
+                onAction(BookListAction.OnSearchQueryChange(it))
+            },
+            {
+                keyboardController?.hide()
+            },
+            modifier = Modifier
+                .widthIn(max = Dimens.dp_400)
+                .fillMaxWidth()
+                .padding(Dimens.dp_16)
+        )
 
+    }
 }
