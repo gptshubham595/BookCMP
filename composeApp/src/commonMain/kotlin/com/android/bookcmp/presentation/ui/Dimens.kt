@@ -617,6 +617,8 @@ object Dimens {
     val dp_598: Dp = 598.dp
     val dp_599: Dp = 599.dp
     val dp_600: Dp = 600.dp
+
+    val dp_700: Dp = 700.dp
     val dp_800: Dp = 800.dp
 
     // SP values for typography

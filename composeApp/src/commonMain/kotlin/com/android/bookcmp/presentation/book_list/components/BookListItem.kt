@@ -128,9 +128,7 @@ fun BookListItem(
                             tint = SandYellow,
                         )
                     }
-
                 }
-
             }
 
             Icon(

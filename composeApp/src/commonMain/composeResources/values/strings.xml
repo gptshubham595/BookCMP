@@ -27,4 +27,8 @@
     <string name="notification_settings">Notification Settings</string>
     <string name="search_hint">Search ...</string>
     <string name="search_icon">Search Icon</string>
+    <string name="search_results">Search Results</string>
+    <string name="favorites">Favorites</string>
+    <string name="no_search_results">Oops, there aren't any books for you.</string>
+    <string name="no_fav_results">You don't have any favourite book.</string>
 </resources>
