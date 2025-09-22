@@ -70,9 +70,9 @@ fun BookListItem(
                     model = book.imageUrl,
                     onSuccess = {
                         if (it.painter.intrinsicSize.width > 1 && it.painter.intrinsicSize.height > 1) {
-                            Result.success(it.painter)
+                            imageLoadResult = Result.success(it.painter)
                         } else {
-                            Result.failure(Exception("Image load failed: Invalid Image Size!"))
+                            imageLoadResult = Result.failure(Exception("Image load failed: Invalid Image Size!"))
                         }
                     },
                     onError = {
