@@ -1,4 +1,4 @@
-package com.android.bookcmp.presentation.book_list
+package com.android.bookcmp.book.presentation.book_list
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,9 +11,9 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.android.bookcmp.core.domain.Book
-import com.android.bookcmp.presentation.book_list.components.BookListItem
-import com.android.bookcmp.presentation.ui.Dimens
+import com.android.bookcmp.book.domain.Book
+import com.android.bookcmp.book.presentation.book_list.components.BookListItem
+import com.android.bookcmp.core.presentation.Dimens
 
 @Composable
 fun BookList(

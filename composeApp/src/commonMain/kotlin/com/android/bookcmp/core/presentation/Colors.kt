@@ -1,4 +1,4 @@
-package com.android.bookcmp.presentation.ui
+package com.android.bookcmp.core.presentation
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.android.bookcmp.common
+package com.android.bookcmp.core.domain
 
 sealed interface Result<out D, out E: IFailure> {
     data class Success<out D>(val data: D): Result<D, Nothing>

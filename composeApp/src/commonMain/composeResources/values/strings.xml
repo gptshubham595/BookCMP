@@ -31,4 +31,14 @@
     <string name="favorites">Favorites</string>
     <string name="no_search_results">Oops, there aren't any books for you.</string>
     <string name="no_fav_results">You don't have any favourite book.</string>
+    <string name="disk_full">Your device storage is full. Please free up some space and try again.</string>
+    <string name="too_many_request">You have made too many requests in a short period of time. Please wait and try again later.</string>
+    <string name="request_timeout">The request has timed out. Please check your internet connection and try again.</string>
+    <string name="no_internet">No internet connection. Please check your network settings and try again.</string>
+    <string name="server_error">A server error has occurred. Please try again later.</string>
+    <string name="serialization_error">An error occurred while processing data. Please try again.</string>
+    <string name="unknown_error">An unknown error has occurred. Please try again.</string>
+
+
+
 </resources>

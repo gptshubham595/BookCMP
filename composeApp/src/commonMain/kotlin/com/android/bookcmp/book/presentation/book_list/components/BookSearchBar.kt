@@ -1,4 +1,4 @@
-package com.android.bookcmp.presentation.book_list.components
+package com.android.bookcmp.book.presentation.book_list.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.background
@@ -25,9 +25,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import bookcmp.composeapp.generated.resources.Res
 import bookcmp.composeapp.generated.resources.search_hint
 import bookcmp.composeapp.generated.resources.search_icon
-import com.android.bookcmp.presentation.ui.DarkBlue
-import com.android.bookcmp.presentation.ui.DesertWhite
-import com.android.bookcmp.presentation.ui.SandYellow
+import com.android.bookcmp.core.presentation.DarkBlue
+import com.android.bookcmp.core.presentation.DesertWhite
+import com.android.bookcmp.core.presentation.SandYellow
 import org.jetbrains.compose.resources.stringResource
 
 @Composable

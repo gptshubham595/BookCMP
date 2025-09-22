@@ -1,7 +1,6 @@
-package com.android.bookcmp.presentation.book_list
+package com.android.bookcmp.book.presentation.book_list
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.gestures.animateScrollBy
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -37,11 +36,11 @@ import bookcmp.composeapp.generated.resources.favorites
 import bookcmp.composeapp.generated.resources.no_fav_results
 import bookcmp.composeapp.generated.resources.no_search_results
 import bookcmp.composeapp.generated.resources.search_results
-import com.android.bookcmp.presentation.book_list.components.BookSearchBar
-import com.android.bookcmp.presentation.ui.DarkBlue
-import com.android.bookcmp.presentation.ui.DesertWhite
-import com.android.bookcmp.presentation.ui.Dimens
-import com.android.bookcmp.presentation.ui.SandYellow
+import com.android.bookcmp.book.presentation.book_list.components.BookSearchBar
+import com.android.bookcmp.core.presentation.DarkBlue
+import com.android.bookcmp.core.presentation.DesertWhite
+import com.android.bookcmp.core.presentation.Dimens
+import com.android.bookcmp.core.presentation.SandYellow
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -168,7 +167,7 @@ fun BookListScreen(
                                 when {
                                     state.errorText != null -> {
                                         Text(
-                                            text = state.errorText,
+                                            text = state.errorText.asString(),
                                             textAlign = TextAlign.Center,
                                             style = MaterialTheme.typography.headlineSmall,
                                             color = MaterialTheme.colorScheme.error

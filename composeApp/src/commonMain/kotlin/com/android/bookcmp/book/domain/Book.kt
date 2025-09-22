@@ -1,4 +1,4 @@
-package com.android.bookcmp.core.domain
+package com.android.bookcmp.book.domain
 
 data class Book(
     val id: String,

@@ -1,4 +1,4 @@
-package com.android.bookcmp.presentation.book_list.components
+package com.android.bookcmp.book.presentation.book_list.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -34,10 +34,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import bookcmp.composeapp.generated.resources.Res
 import bookcmp.composeapp.generated.resources.book_error
 import coil3.compose.rememberAsyncImagePainter
-import com.android.bookcmp.core.domain.Book
-import com.android.bookcmp.presentation.ui.Dimens
-import com.android.bookcmp.presentation.ui.LightBlue
-import com.android.bookcmp.presentation.ui.SandYellow
+import com.android.bookcmp.book.domain.Book
+import com.android.bookcmp.core.presentation.Dimens
+import com.android.bookcmp.core.presentation.LightBlue
+import com.android.bookcmp.core.presentation.SandYellow
 import org.jetbrains.compose.resources.painterResource
 import kotlin.math.round
 
