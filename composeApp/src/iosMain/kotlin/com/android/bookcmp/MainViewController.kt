@@ -1,11 +1,12 @@
 package com.android.bookcmp
 
 import androidx.compose.ui.window.ComposeUIViewController
-import io.ktor.client.engine.darwin.Darwin
+import com.android.bookcmp.app.App
+import com.android.bookcmp.di.initKoin
 
 fun MainViewController() =
-    ComposeUIViewController {
-        App(
-            engine = Darwin.create()
-        )
+    ComposeUIViewController(
+        configure = { initKoin() }
+    ) {
+        App()
     }

@@ -1,4 +1,4 @@
-package com.android.bookcmp
+package com.android.bookcmp.previews
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box

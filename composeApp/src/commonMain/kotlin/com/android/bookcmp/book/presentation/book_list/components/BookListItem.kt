@@ -43,9 +43,7 @@ import kotlin.math.round
 
 @Composable
 fun BookListItem(
-    book: Book,
-    onClick: () -> Unit,
-    modifier: Modifier
+    book: Book, onClick: () -> Unit, modifier: Modifier
 ) {
     Surface(
         shape = RoundedCornerShape(Dimens.dp_32),
@@ -53,51 +51,48 @@ fun BookListItem(
         color = LightBlue.copy(alpha = 0.2f)
     ) {
         Row(
-            modifier = Modifier
-                .padding(Dimens.dp_16)
-                .fillMaxWidth()
-                .height(IntrinsicSize.Min),
+            modifier = Modifier.padding(Dimens.dp_16).fillMaxWidth().height(IntrinsicSize.Min),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Box(
-                modifier = Modifier
-                    .height(Dimens.dp_100)
-                    .padding(end = Dimens.dp_16),
+                modifier = Modifier.height(Dimens.dp_100).padding(end = Dimens.dp_16),
                 contentAlignment = Alignment.Center
             ) {
                 var imageLoadResult by remember { mutableStateOf<Result<Painter>?>(null) }
-                val painter = rememberAsyncImagePainter(
-                    model = book.imageUrl,
-                    onSuccess = {
-                        if (it.painter.intrinsicSize.width > 1 && it.painter.intrinsicSize.height > 1) {
-                            imageLoadResult = Result.success(it.painter)
-                        } else {
-                            imageLoadResult = Result.failure(Exception("Image load failed: Invalid Image Size!"))
-                        }
-                    },
-                    onError = {
-                        it.result.throwable.printStackTrace()
-                        imageLoadResult = Result.failure(it.result.throwable)
+                val painter = rememberAsyncImagePainter(model = book.imageUrl, onSuccess = {
+                    if (it.painter.intrinsicSize.width > 1 && it.painter.intrinsicSize.height > 1) {
+                        imageLoadResult = Result.success(it.painter)
+                    } else {
+                        imageLoadResult =
+                            Result.failure(Exception("Image load failed: Invalid Image Size!"))
                     }
-                )
+                }, onError = {
+                    it.result.throwable.printStackTrace()
+                    imageLoadResult = Result.failure(it.result.throwable)
+                })
 
                 when (val result = imageLoadResult) {
                     null -> CircularProgressIndicator()
                     else -> Image(
-                        painter = if (result.isSuccess) painter else painterResource(Res.drawable.book_error),
+                        painter =
+                            if (result.isSuccess)
+                                painter
+                            else
+                                painterResource(Res.drawable.book_error),
                         contentDescription = "Book image",
-                        contentScale = if (result.isSuccess) ContentScale.Crop else ContentScale.Fit,
+                        contentScale =
+                            if (result.isSuccess)
+                                ContentScale.Crop
+                            else
+                                ContentScale.Fit,
                         modifier = Modifier.aspectRatio(
-                            ratio = 0.65F,
-                            matchHeightConstraintsFirst = true
+                            ratio = 0.65F, matchHeightConstraintsFirst = true
                         )
                     )
                 }
             }
             Column(
-                modifier = Modifier
-                    .weight(1F),
-                verticalArrangement = Arrangement.Center
+                modifier = Modifier.weight(1F), verticalArrangement = Arrangement.Center
             ) {
                 Text(
                     text = book.title,
@@ -115,8 +110,7 @@ fun BookListItem(
                 }
                 book.averageRating?.let { rating ->
                     Row(
-                        modifier = Modifier,
-                        verticalAlignment = Alignment.CenterVertically
+                        modifier = Modifier, verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text(
                             text = "${round((rating * 10) / 10.0)}",
@@ -134,8 +128,7 @@ fun BookListItem(
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
                 contentDescription = "Right Arrow",
-                modifier = Modifier
-                    .size(Dimens.dp_36)
+                modifier = Modifier.size(Dimens.dp_36)
             )
 
         }

@@ -5,9 +5,11 @@ import com.android.bookcmp.book.domain.Book
 
 fun SearchBookDTO.toBook(): Book =
     Book(
-        id = this.id,
+        id = this.id.substringAfterLast("/"),
         title = this.title,
-        imageUrl = coverEditionKey?.let { "https://covers.openlibrary.org/b/olid/${this.coverEditionKey}-L.jpg" }
+        imageUrl = coverEditionKey?.let {
+            "https://covers.openlibrary.org/b/olid/${this.coverEditionKey}-L.jpg"
+        }
             ?: "https://covers.openlibrary.org/b/olid/${this.coverAlternativeKey}-L.jpg",
         authors = this.authorName ?: emptyList(),
         firstPublishYear = this.firstPublishYear?.toString(),
