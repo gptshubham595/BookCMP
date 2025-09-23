@@ -1,0 +1,22 @@
+package com.android.bookcmp
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import com.android.bookcmp.app.App
+
+class BookActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        enableEdgeToEdge()
+        super.onCreate(savedInstanceState)
+
+        setContent {
+            App()
+        }
+    }
+
+    fun getStringRes(): Int{
+        return R.string.app_name
+    }
+}

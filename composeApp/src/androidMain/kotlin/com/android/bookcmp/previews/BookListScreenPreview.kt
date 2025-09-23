@@ -8,9 +8,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.android.bookcmp.book.domain.Book
-import com.android.bookcmp.book.presentation.book_list.BookListScreen
-import com.android.bookcmp.book.presentation.book_list.BookListState
+import com.android.book_feature.book.domain.Book
+import com.android.book_feature.book.presentation.book_list.BookListScreen
+import com.android.book_feature.book.presentation.book_list.BookListState
 import kotlin.random.Random.Default.nextDouble
 
 @Preview

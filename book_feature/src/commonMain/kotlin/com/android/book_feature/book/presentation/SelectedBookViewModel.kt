@@ -1,0 +1,18 @@
+package com.android.book_feature.book.presentation
+
+import androidx.lifecycle.ViewModel
+import com.android.book_feature.book.domain.Book
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+
+class SelectedBookViewModel : ViewModel() {
+
+    private val _selectedBook = MutableStateFlow<Book?>(null)
+    val selectedBook: StateFlow<Book?> = _selectedBook.asStateFlow()
+
+    fun onSelectBook(book: Book?){
+        _selectedBook.value = book
+    }
+}
+

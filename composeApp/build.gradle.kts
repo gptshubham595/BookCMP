@@ -1,9 +1,5 @@
-@file:OptIn(ExperimentalKotlinGradlePluginApi::class)
-
 import org.jetbrains.compose.desktop.application.dsl.TargetFormat
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import java.awt.AWTEventMulticaster.add
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -22,7 +18,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_17)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -39,7 +35,7 @@ kotlin {
     room {
         schemaDirectory("$projectDir/schemas")
     }
-    
+
     sourceSets {
         androidMain.dependencies {
             implementation(compose.preview)
@@ -51,6 +47,8 @@ kotlin {
         }
 
         commonMain.dependencies {
+            implementation(project(":book_feature"))
+            implementation(project(":core"))
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
